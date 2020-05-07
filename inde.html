@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="color_this">Hello world how are your heart beats</p>
+    <button id="colors"></button>
+    <br><br><br>
+
+    <p id="checking"></p>
+    <p class="same"> This is line 1</p>
+    <p class="same"> This is line 2</p>
+    <p class="same"> This is line 3</p>
+    <p class="same" id="123"> This is line 4</p>
+    <button id="lines"></button>
+    <br><br><br>
+
+
+    <button id="values"></button>
+    <p id="first"></p>
+    <p id="second"></p>
+    <br><br><br>
+
+    <input type="text" id="text1">
+    <button id="lista"></button>
+    <p id="box1"></p>
+    <br><br><br>
+
+   
+   
+    <script>
+
+        //adding color to text in one line with click of button
+        document.getElementById("colors").addEventListener('click',changecolor);
+        
+        function changecolor(){
+
+            document.getElementById("color_this").style.color="red";
+
+        }
+
+        //adding color to text in one of the line line with click of button
+
+        
+        
+
+     document.getElementById('lines').addEventListener('click',colourq);
+     
+     function colourq(){
+        let nos=document.getElementsByClassName("same");
+       
+        // nos[abs(Math.floor(Math.random()*10)-7)].style.backgroundColor="red";
+            for( var j=0;j<nos.length;j++){
+                 if(nos.length<6){
+
+                 }else{
+
+                 }
+               nos[2].style.backgroundColor="red";
+            }
+     }
+
+
+        //adding data to lines in html
+        document.getElementById("values").addEventListener('click',valuable);
+        function valuable(){
+                let name="bob";
+                document.getElementById("first").innerHTML="hi "+name+" is my name.";
+                let age=34;
+                document.querySelector('#second').innerHTML="I am "+age+" years old";
+
+
+        }
+
+        //text list
+        let data=document.getElementById("text1");
+        let products=['apple','banana','guavava'];
+        let anda =products.toString();
+        document.getElementById("lista").addEventListener('click',listas);
+        document.getElementById("box1").innerHTML=anda;
+        function listas(){
+            let newdata=data.value;
+           if(newdata===""){
+               alert('chicken');
+           }else{
+            products.push(newdata);
+            newdata=products.toString();
+            document.getElementById("box1").innerHTML=newdata;
+           }
+        }
+
+        
+            
+
+
+    </script>
+
+</body>
+</html>
